@@ -43,13 +43,26 @@ struct sortSecond {
 
 void karanel()
 {
-    
+    string a, b, c;
+    cin>>a>>b>>c;
+    unordered_map<char, int> mp;
+    f(i, 0, a.size()) mp[a[i]]++;
+    f(i, 0, b.size()) mp[b[i]]++;
+    f(i, 0, c.size()) mp[c[i]]--;
+
+    for(auto it=mp.begin(); it!=mp.end(); it++){
+        if(it->second!=0){
+            cout<<"NO"<<endl;
+            return;
+        }
+    }
+    cout<<"YES"<<endl;
 }
 
 int32_t main()
 {
     fast;
-    test(t)
+    // test(t)
         karanel();
     return 0;
 }
