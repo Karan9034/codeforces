@@ -15,7 +15,6 @@ using namespace std;
 #define M_PI        3.14159265358979323846
 #define test(t)     int t; cin >> t; while(t--)
 #define f(i, a, b)  for(int i = a; i < b; i++)
-#define fr(it, arr) for(auto it=arr.begin(); it!=arr.end(); it++)
 #define endl        "\n"
 #define deb(x)      cout << #x << ": " << x << endl;
 #define fast        ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
@@ -24,7 +23,6 @@ using namespace std;
 #define vi          vector<int>
 #define pii         pair<int, int>
 #define vpii        vector<pair<int,int>>
-
 
 template <typename T1, typename T2>
 struct sortFirst {
@@ -45,13 +43,28 @@ struct sortSecond {
 
 void karanel()
 {
-    
+    int n, m, a, l, r;
+    cin>>n>>m>>a;
+    if(n%a==0 && m%a==0){
+        l = n/a;
+        r = m/a;
+    }else if(n%a==0){
+        l = n/a;
+        r = m/a + 1;
+    }else if(m%a==0){
+        l = n/a + 1;
+        r = m/a;
+    }else{
+        l = n/a + 1;
+        r = m/a + 1;
+    }
+    cout<<l*r<<endl;
 }
 
 int32_t main()
 {
-    fast
-    test(t)
+    fast;
+    // test(t)
         karanel();
     return 0;
 }

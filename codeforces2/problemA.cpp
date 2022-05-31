@@ -25,7 +25,6 @@ using namespace std;
 #define pii         pair<int, int>
 #define vpii        vector<pair<int,int>>
 
-
 template <typename T1, typename T2>
 struct sortFirst {
     typedef pair<T1, T2> type;
@@ -45,13 +44,33 @@ struct sortSecond {
 
 void karanel()
 {
-    
+    int n;
+    cin>>n;
+    map<string, int> mp;
+    map<string, int> ans;
+    vector<string> names(n);
+    vector<int> scores(n);
+    int max_score=INT_MIN;
+    f(i, 0, n){
+        cin>>names[i]>>scores[i];
+        mp[names[i]]+=scores[i];
+    }
+    fr(it, mp){
+        if(it->second > max_score) max_score = it->second;
+    }
+    f(i, 0, n){
+        ans[names[i]] += scores[i];
+        if(mp[names[i]] == max_score && ans[names[i]]>=max_score){
+            cout<<names[i]<<endl;
+            break;
+        }
+    }
 }
 
 int32_t main()
 {
     fast
-    test(t)
+    // test(t)
         karanel();
     return 0;
 }
