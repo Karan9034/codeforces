@@ -47,13 +47,29 @@ struct sortSecond {
 
 void karanel()
 {
-    
+    int n, p1, p2, p3, t1, t2, ans=0;
+    cin>>n>>p1>>p2>>p3>>t1>>t2;
+    vi l(n);
+    vi r(n);
+    cin>>l[0]>>r[0];
+    ans+=p1*(r[0]-l[0]);
+    f(i, 1, n){
+        cin>>l[i]>>r[i];
+        if(l[i]-r[i-1]>t1+t2){
+            ans += p1*t1 + p2*t2 + p3*(l[i]-r[i-1]-t1-t2) + p1*(r[i]-l[i]);
+        }else if(l[i]-r[i-1]>t1){
+            ans += p1*t1 + p2*(l[i]-r[i-1]-t1) + p1*(r[i]-l[i]);
+        }else{
+            ans += p1*(r[i]-r[i-1]);
+        }
+    }
+    cout<<ans;
 }
 
 int32_t main()
 {
     fast
-    test(t)
+    // test(t)
         karanel();
     return 0;
 }

@@ -12,7 +12,6 @@ using namespace std;
 */
 
 #define int         long long int
-#define double      long double
 #define M_PI        3.14159265358979323846
 #define test(t)     int t; cin >> t; while(t--)
 #define f(i, a, b)  for(int i = a; i < b; i++)
@@ -24,7 +23,6 @@ using namespace std;
 #define all(v)      v.begin(), v.end()
 #define vi          vector<int>
 #define pii         pair<int, int>
-#define vvi         vector<vector<int>>
 #define vpii        vector<pair<int,int>>
 
 
@@ -47,13 +45,19 @@ struct sortSecond {
 
 void karanel()
 {
-    
+    string s;
+    cin>>s;
+    int n=0, sz=0, mx=0;
+    stack<char> st;
+    for(i, 0, s.length()){
+        
+    }
 }
 
 int32_t main()
 {
     fast
-    test(t)
+    // test(t)
         karanel();
     return 0;
 }

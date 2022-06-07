@@ -12,7 +12,6 @@ using namespace std;
 */
 
 #define int         long long int
-#define double      long double
 #define M_PI        3.14159265358979323846
 #define test(t)     int t; cin >> t; while(t--)
 #define f(i, a, b)  for(int i = a; i < b; i++)
@@ -47,13 +46,24 @@ struct sortSecond {
 
 void karanel()
 {
-    
+    int x, y, w;
+    cin>>y>>w;
+    x = y>w ? 7-y : 7-w;
+    if(x%6==0){
+        cout<<x/6<<"/"<<1<<endl;
+    }else if(x%2==0){
+        cout<<x/2<<"/"<<3<<endl;
+    }else if(x%3==0){
+        cout<<x/3<<"/"<<2<<endl;
+    }else{
+        cout<<x<<"/"<<6<<endl;
+    }
 }
 
 int32_t main()
 {
     fast
-    test(t)
+    // test(t)
         karanel();
     return 0;
 }

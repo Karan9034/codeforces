@@ -44,16 +44,35 @@ struct sortSecond {
     }
 };
 
-
 void karanel()
 {
-    
+    double n, vs, vb, xf, yf, x=0, y=0, ans, prevDis=INT_MAX, min_time=INT_MAX;
+    cin>>n>>vb>>vs;
+    vi arr(n);
+    f(i, 0, n) cin>>arr[i];
+    cin>>xf>>yf;
+    if(vs>vb){
+        cout<<2<<endl;
+        return;
+    }else{
+        f(i, 1, n){
+            double dis = sqrt((xf-arr[i])*(xf-arr[i])+ yf*yf);
+            double temp = arr[i]/vb + dis/vs;
+            if(temp <= min_time){
+                min_time = temp;
+                // prevDis = dis;
+                ans = i+1;
+            }
+        }
+        cout<<ans<<endl;
+        return;
+    }
 }
 
 int32_t main()
 {
     fast
-    test(t)
+    // test(t)
         karanel();
     return 0;
 }

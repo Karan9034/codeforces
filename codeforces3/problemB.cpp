@@ -45,11 +45,15 @@ struct sortSecond {
 
 void karanel()
 {
-    int n, v;
-    cin>>n>>v;
-    f(i, 0, n){
-        
-    }
+    // int n, v;
+    // cin>>n>>v;
+    // vector<int> v(n);
+    // map<int, int> cap(n);
+    // f(i, 0, n){
+    //     cin>>v[i]>>mp[i];
+    // }
+    // sort(all(mp), sortSecond);
+    
 }
 
 int32_t main()

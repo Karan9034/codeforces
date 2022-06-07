@@ -44,16 +44,26 @@ struct sortSecond {
     }
 };
 
+int n, ans=0;
+
+void recur(int x){
+    if(x>n) return;
+    ans++;
+    recur(x*10);
+    recur(x*10+1);
+}
 
 void karanel()
 {
-    
+    cin>>n;
+    recur(1);
+    cout<<ans;
 }
 
 int32_t main()
 {
     fast
-    test(t)
+    // test(t)
         karanel();
     return 0;
 }
